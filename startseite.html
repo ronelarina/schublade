@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Schublade</title>
+    <link rel="stylesheet" href="startseite.css"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto:wght@100;300;400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <h1><a href="startseite.html">Schublade</a></h1>
+        <div class="burger-menu">&#9776;</div>
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="seite1.html">Sexismus</a></li>
+                <li><a href="seite2.html">Homophobie</a></li>
+                <li><a href="seite3.html">Transphobie</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="background-image">
+            <div class="text_oben">
+                <h2>Schublade</h2>
+                <p>Zusammen gegen Vorurteile</p>
+            </div>
+            <div class="text_unten">
+                <h3>Abschlussprojekt</h3>
+                <p>2024</p>
+            </div>
+
+        </div>
+
+        <div class="impressum">
+            <a href="impressum.html">Impressum</a></div> <br><br>
+
+    </main>
+
+    <script src="script.js"></script> 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var burgerMenu = document.querySelector('.burger-menu');
+            var mobileMenu = document.querySelector('.mobile-menu');
+
+            burgerMenu.addEventListener('click', function () {
+                if (mobileMenu.style.display === 'block') {
+                    mobileMenu.style.display = 'none';
+                } else {
+                    mobileMenu.style.display = 'block';
+                }
+            });
+            
+            document.addEventListener('click', function (event) {
+                var isClickInsideMobileMenu = mobileMenu.contains(event.target);
+                var isClickOnBurgerMenu = burgerMenu.contains(event.target);
+
+                if (!isClickInsideMobileMenu && !isClickOnBurgerMenu) {
+                    mobileMenu.style.display = 'none';
+                }
+
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

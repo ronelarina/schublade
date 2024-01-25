@@ -1,0 +1,163 @@
+body {
+    background-color: black;
+    /* Hintergrundfarbe der gesamten Website */
+    color: white;
+    /* Textfarbe für bessere Lesbarkeit */
+    margin: 0;
+}
+
+.header {
+    background-color: transparent;
+    padding: 0%;
+    text-align: center;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    z-index: 1000;
+    
+}
+
+.header {
+    margin: 0;
+    font-family: 'Bungee', sans-serif;
+    text-align: center;
+    padding-top: 2%;
+}
+
+.header h1 a {
+    text-decoration: none; /* Entferne die Standard-Unterstreichung von Links */
+    color: rgb(255, 255, 255); /* Ändere die Farbe des Links nach Bedarf */
+    font-size: 7vw;
+}
+
+.burger-menu {
+    position: absolute;
+    right: 8%;
+    /* Ändere diesen Wert nach Bedarf */
+    /* Ändere diesen Wert nach Bedarf und passe ihn an die Höhe deines Headers an */
+    top: 18px;
+    cursor: pointer;
+    font-size: 10vw;
+    color: white;
+}
+
+.mobile-menu {
+    display: none;
+    left: 50%;
+    /* Positioniere das Menü relativ zum nächsten positionierten (nicht statischen) Elternelement */
+    text-decoration: none;
+    top: 100%;
+    /* Positioniere das Menü unter dem Burger-Menü */
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Leicht transparenter Hintergrund */
+    padding: 60px;
+    /* Verringere den äußeren Abstand des Menüs */
+
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    text-align: center;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 2%;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 5vw;
+    cursor: pointer;
+    text-align: center;
+    /* Zentriere den Text innerhalb des Links */
+    box-sizing: border-box;
+    /* Behalte das Box-Modell bei, um Padding in die Breite/Höhe einzubeziehen */
+
+}
+
+.mobile-menu li {
+    margin-bottom: 10vh;
+    /* Reduziere den Abstand zwischen den Listenelementen */
+
+}
+
+
+.background-image {
+    background-image: url('Material/Schublade.png');
+    /* Passe den Pfad zu deinem Bild an */
+    background-size: 80%;
+    background-position: center;
+    height: 100vh;
+    /* 100% der Bildschirmhöhe */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    /* Hintergrundbild nicht wiederholen */
+
+
+
+}
+
+.main-content {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    
+}
+
+.text_oben {
+    text-align: center;
+    font-size: 4vh;
+    font-size: 4vw;
+    margin-bottom: 20vh;
+    /* Ändere den Wert nach Bedarf */
+    padding-top: 6%;
+}
+
+.text_oben h2 {
+    font-family: 'Bungee', sans-serif;
+    font-size: 10vh;
+    font-size: 10vw;
+    margin: 0;
+
+}
+
+.text_oben p {
+    margin-top: 5px;
+    /* Ändere den Wert nach Bedarf */
+
+}
+
+.text_unten {
+    text-align: center;
+    margin-bottom: 0px;
+    padding-top: 15%;
+}
+
+.text_unten h3 {
+    font-weight: 200;
+    font-size: 5vh;
+    font-size: 5vw;
+    margin-bottom: 2px;
+}
+
+.text_unten p {
+    font-family: 'Bungee', sans-serif;
+    font-size: 8vh;
+    font-size: 8vw;
+    margin-top: 5px;
+}
+
+.impressum a {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: white;
+    text-decoration: none; /* Unterstreichung entfernen */
+    margin: 0;
+    display: inline-block; /* Füge display: inline-block hinzu, um text-align zu verwenden */
+    width: 100%;
+}

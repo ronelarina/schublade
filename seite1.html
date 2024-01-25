@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Schublade</title>
+  <link rel="stylesheet" href="seiten.css"> <!-- Verlinke deine CSS-Datei -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto:wght@100;300;400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <header class="header">
+    <h1><a href="startseite.html">Schublade</a></h1>
+    <div class="burger-menu">&#9776;</div>
+    <nav class="mobile-menu">
+      <ul>
+        <li><a href="seite1.html">Sexismus</a></li>
+        <li><a href="seite2.html">Homophobie</a></li>
+        <li><a href="seite3.html">Transphobie</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">
+
+    <div class="image">
+      <img src="Material/Sexismus_Plakat.jpg" alt="">
+    </div>
+
+    
+
+    <div class="text">
+      <div class="ueberschrift">
+        <h2>Sexismus</h2>
+      </div>
+      <p>Sexismus stellt eine Form der Diskriminierung dar, die sich durch die Benachteiligung, Abwertung, Verletzung
+        und Unterdrückung von Gruppen aufgrund ihres Geschlechts auszeichnet. Dabei beinhaltet Sexismus die Vorstellung,
+        dass es eine festgelegte Hierarchie oder Reihenfolge der Geschlechter gibt, beispielsweise die Annahme, dass
+        Männer einen höheren Wert als Frauen besitzen. <br> <br>
+        Sexismus betrifft Frauen übermäßig häufig und durchzieht alle Lebensbereiche. Wenn sich sexistische Vorfälle
+        wiederholt über einen längeren Zeitraum hinweg ereignen, beschränken sie die Freiheit und Chancen von Frauen und
+        Mädchen. <br> <br>
+        Die negativen Auswirkungen von Sexismus können für einige Frauen durch zusätzliche Faktoren wie ethnische Zugehörigkeit, Alter, Religion, Behinderung, soziale Herkunft,
+        Geschlechtsidentität, sexuelle Orientierung oder andere Merkmale verursacht werden. <br> <br>
+        Mit meiner Aktion möchte ich gegen Schubladendenken vorgehen. Ich möchte künstlerisch auf die Themen aufmerksam
+        machen und dabei ein paar Menschen zum Nachdenken anregen. Gerne kannst du eigene Erfahrungen auf die Plakate
+        dazu schreiben oder malen. Also schnapp dir einen Stift und lege los! <br> <br>
+        Wenn du noch mehr Informationen haben willst, schaue gerne mal auf der Website des LSVD vorbei. Dort findest du
+        interessante Artikel und weiters um dich weiter zu informieren. <br> <br><br> <br> </p>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script> <!-- Verlinke deine JavaScript-Datei, wenn benötigt -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var burgerMenu = document.querySelector('.burger-menu');
+      var mobileMenu = document.querySelector('.mobile-menu');
+
+      burgerMenu.addEventListener('click', function () {
+        if (mobileMenu.style.display === 'block') {
+          mobileMenu.style.display = 'none';
+        } else {
+          mobileMenu.style.display = 'block';
+        }
+      });
+
+      // Hinzugefügt: Klick außerhalb des Mobilmenüs schließt es
+      document.addEventListener('click', function (event) {
+        var isClickInsideMobileMenu = mobileMenu.contains(event.target);
+        var isClickOnBurgerMenu = burgerMenu.contains(event.target);
+
+        if (!isClickInsideMobileMenu && !isClickOnBurgerMenu) {
+          mobileMenu.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>
